@@ -8,37 +8,32 @@ package com.mycompany.csc325_oop_designreview_lab;
  *
  * @author MoaathAlrajab
  */
+import java.util.Scanner;
+
 public class MainClass {
 
- public static void main(String[] args) {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in); // For user input
+
 		// ToDo 5: Fix the error
+		// The error fix would typically relate to constructors or class definitions.
 
-		// ToDo 6: Fix the constructor of the Student class
+		// Creating Freshman and Senior classes
+		Freshman std1 = new Freshman("James", 20, 12); // name, age, credits
+		Senior std2 = new Senior("John", 30, 90); // name, age, credits
 
-                // Todo 7: Create two classes for Freshman and Senior 
+		// ToDo 12: Set the GPA of the student using the scanner and user input
+		System.out.print("Enter GPA for " + std1.getName() + ": ");
+		double gpa = scanner.nextDouble();
+		std1.setGpa(gpa); // Set the GPA
+		System.out.println(std1); // Print Freshman details
 
-                // ToDo 8: The senior class should have a minimum of 85 credits  
+		System.out.print("Enter GPA for " + std2.getName() + ": ");
+		gpa = scanner.nextDouble();
+		std2.setGpa(gpa); // Set the GPA
+		System.out.println(std2); // Print Senior details
 
-		// ToDo 9: Add a toString method for the Student class
-		// ToDo 10: Add a toString method for the Freshman class
-
-		Student std1= new Student("James", 20);
-                // ToDo 11: Add a toString method for the Senior class
-
-		Freshman std1= new Student("James", 20, 12); // name, age, credits
-
-                Senior std2 = new Student("John", 30, 90);
-
-		// ToDo 12: Set the gpa of the student using the scanner and user
-		// 			input and then print the output.
-
-		System.out.println(std1);
-
-                System.out.println(std2);
-
-		// ToDo 13: add comments and explain your code
-
+		// Closing the scanner
+		scanner.close();
 	}
-
 }
-
